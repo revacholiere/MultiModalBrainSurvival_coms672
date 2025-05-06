@@ -28,6 +28,20 @@ class TanhAttention(nn.Module):
         out = x * attention_weights * x.shape[1]
         return out,attention_weights
 
+class TanhCrossAttention(nn.Module):
+    def __init__(self, dim=2048):
+        super(TanhCrossAttention, self).__init__()
+        self.dim = dim
+        self.gene_linear = nn.Linear(11047, dim) # query vector coming from RNA sequence
+        self.linear = nn.Linear(dim, dim, bias=False)
+
+    def forward(self, x, gene_expression):
+        gene_projection = self.gene_linear(gene_expression)
+        logits = torch.tanh(self.linear(x)).matmul(gene_projection.unsqueeze(-1))
+        attention_weights = torch.nn.functional.softmax(logits, dim=1)
+        out = x * attention_weights * x.shape[1]
+        return out,attention_weights
+
 
 class AggregationModel(nn.Module):
     def __init__(self, resnet, aggregator, aggregator_dim, resnet_dim=2048, out_features=1):
@@ -102,6 +116,31 @@ class BagHistopathologyRNAModel(nn.Module):
         #print(rna_features.shape)
         output = self.final_mlp(torch.cat([image_features, rna_features], dim=1))
         return output
+
+
+
+class AggregationBagHistopathologyRNAModel(nn.Module):
+    def __init__(self, resnet, rna_mlp, final_mlp):
+        super(AggregationBagHistopathologyRNAModel, self).__init__()
+        self.resnet = resnet
+        self.rna_mlp = rna_mlp
+        self.final_mlp = final_mlp
+        self.aggregator = TanhCrossAttention(dim=2048)
+
+    def forward(self, patch_bag, rna,resnet_dim=2048):
+        (batch_size, bag_size, c, h, w) = patch_bag.shape
+        patch_bag = patch_bag.reshape(-1, c, h, w)
+        image_features = self.resnet.forward_extract(patch_bag)
+        image_features = image_features.view(batch_size, bag_size, resnet_dim)
+
+        image_features, attention_weights = self.aggregator(image_features, rna)
+        image_features = image_features.mean(dim=1) 
+        rna_features = self.rna_mlp(rna)
+        #print (image_features.shape)
+        #print(rna_features.shape)
+        output = self.final_mlp(torch.cat([image_features, rna_features], dim=1))
+        return output
+
 
 class HistopathologyRNAModel(nn.Module):
     def __init__(self, resnet, rna_mlp, final_mlp):

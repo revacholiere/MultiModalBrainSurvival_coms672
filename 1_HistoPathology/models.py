@@ -31,6 +31,22 @@ class TanhAttention(nn.Module):
         attention_weights = torch.nn.functional.softmax(logits, dim=1)
         out = x * attention_weights * x.shape[1]
         return out,attention_weights
+    
+
+class TanhCrossAttention(nn.Module):
+    def __init__(self, dim=2048):
+        super(TanhCrossAttention, self).__init__()
+        self.dim = dim
+        self.gene_linear = nn.Linear(11047, dim) # query vector coming from RNA sequence
+        self.linear = nn.Linear(dim, dim, bias=False)
+
+    def forward(self, x, gene_expression):
+        gene_projection = self.gene_linear(gene_expression)
+        logits = torch.tanh(self.linear(x)).matmul(gene_projection.unsqueeze(-1))
+        attention_weights = torch.nn.functional.softmax(logits, dim=1)
+        out = x * attention_weights * x.shape[1]
+        return out,attention_weights
+
 
 class AggregationModel(nn.Module):
     def __init__(self, resnet, aggregator, aggregator_dim, resnet_dim=2048, out_features=1):
