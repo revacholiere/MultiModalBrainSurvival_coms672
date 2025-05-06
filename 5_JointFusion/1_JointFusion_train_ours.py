@@ -41,7 +41,7 @@ import argparse
 
 from datasets import PatchRNADataset, PatchBagRNADataset
 from resnet import resnet50
-from models import HistopathologyRNAModel, AggregationModel, AggregationProjectModel, Identity, TanhAttention, CoxLoss, AggregationBagHistopathologyRNAModel
+from models import HistopathologyRNAModel, AggregationModel, AggregationProjectModel, Identity, TanhAttention, CoxLoss, AggregationBagHistopathologyRNAModel, TanhCrossAttention
 
 from tensorboardX import SummaryWriter
 
@@ -90,7 +90,7 @@ def evaluate(model, val_dataloader, criterion, summary_writer, device, epoch, mo
         survival_months_list.append(survival_months.detach().cpu().numpy())
         vital_status_list.append(vital_status.detach().cpu().numpy())
         wsi_list.append(wsis)
-        case_list.append(batch_dict['case'])
+        case_list.append(batch_dict['case_id'])
 
     wsi_list = [w for w_b in wsi_list for w in w_b]
     case_list = [c for c_b in case_list for c in c_b]
@@ -243,11 +243,11 @@ def train_model(model, dataloaders, criterion, optimizer, device, save_dir='chec
         
         if val_loss < best_val_loss:
             best_epoch = epoch
-            torch.save(model.state_dict(), os.path.join(save_dir, 'model_dict_best.pt'))
+            torch.save(model.state_dict(), os.path.join(save_dir, 'model_dict_best_ours.pt'))
             best_val_loss = val_loss
                 
 
-    torch.save(model.state_dict(), os.path.join(save_dir, 'model_last.pt'))
+    torch.save(model.state_dict(), os.path.join(save_dir, 'model_last_ours.pt'))
 
     print("EVALUATING ON VAL SET")
     val_loss, val_output_last = evaluate(model, dataloaders['val'], criterion, summary_writer, device, epoch, task=task,
@@ -309,11 +309,13 @@ def main():
     elif config['aggregator'] == 'transformer':
         aggregator = TransformerEncoder(config['transformer_layers'], 2048, config['aggregator_hdim'], 5,
                                         config['aggregator_hdim'], .2, 0)
+    elif config['aggregator'] == 'cross_attention':
+        aggregator = TanhCrossAttention(dim=2048)
         
     model_histo = resnet
     model_rna = torch.nn.Sequential(
         nn.Dropout(), 
-        nn.Linear(12778, 4096), 
+        nn.Linear(11047, 4096), 
         nn.ReLU(), 
         nn.Dropout(), 
         nn.Linear(4096, 2048), 
@@ -321,8 +323,10 @@ def main():
     combine_mlp = torch.nn.Sequential(
         nn.Dropout(0.8), 
         nn.Linear(4096, 1)) #third model
-
-    model = AggregationBagHistopathologyRNAModel(model_histo, model_rna, combine_mlp)
+    
+    
+    
+    model = AggregationBagHistopathologyRNAModel(model_histo, model_rna, combine_mlp, aggregator)
     if config['restore_path'] != "":
         restore_path=config['restore_path']
         print (restore_path)
@@ -381,12 +385,13 @@ def main():
     params_to_update_rna = []
     params_to_update_mlp = []
 
+
     print("params to learn")
 
     n_layers_to_train = config.get('n_layers_to_train', 100)
 
     layers_to_train = [resnet.fc, resnet.layer4, resnet.layer3, resnet.layer2, resnet.layer1, resnet.conv1]
-    layers_to_train = layers_to_train[:n_layers_to_train] 
+    layers_to_train = layers_to_train[:n_layers_to_train] + [model.aggregator]
 
     for param in model_histo.parameters():
         param.requires_grad = False
@@ -409,6 +414,11 @@ def main():
         if param.requires_grad:
             print("\t {}".format(n))
             params_to_update_mlp.append(param)
+            
+
+
+
+        
 
     optimizer_ft = Adam([{'params': params_to_update_histo, 'lr': config['lr_histo']},
                         {'params': params_to_update_rna, 'lr': config['lr_rna']},
@@ -452,7 +462,7 @@ def main():
 ####################
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--config', type=str, default='config.json', help='configuration json file')
+parser.add_argument('--config', type=str, default='config_ours.json', help='configuration json file')
 parser.add_argument("--save_images", type=int, default=0, help='save sample images from the dataset')
 parser.add_argument("--quick", type=int, default=0, help='use small datasets to check that the script runs')
 parser.add_argument("--log", type=int, default=0, help='0 = do not use a summary writer')

@@ -120,12 +120,12 @@ class BagHistopathologyRNAModel(nn.Module):
 
 
 class AggregationBagHistopathologyRNAModel(nn.Module):
-    def __init__(self, resnet, rna_mlp, final_mlp):
+    def __init__(self, resnet, rna_mlp, final_mlp, aggregator):
         super(AggregationBagHistopathologyRNAModel, self).__init__()
         self.resnet = resnet
         self.rna_mlp = rna_mlp
         self.final_mlp = final_mlp
-        self.aggregator = TanhCrossAttention(dim=2048)
+        self.aggregator = aggregator
 
     def forward(self, patch_bag, rna,resnet_dim=2048):
         (batch_size, bag_size, c, h, w) = patch_bag.shape
