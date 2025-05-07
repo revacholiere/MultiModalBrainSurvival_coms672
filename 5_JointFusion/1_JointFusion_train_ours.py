@@ -68,6 +68,7 @@ def evaluate(model, val_dataloader, criterion, summary_writer, device, epoch, mo
 
     for b_idx, batch_dict in enumerate(val_dataloader):
         patches = batch_dict['patch_bag'].to(device)
+        #print(patches.shape)
         rna_data = batch_dict['rna_data'].to(device)
         survival_months = batch_dict['survival_months'].to(device).float()
         vital_status = batch_dict['vital_status'].to(device).float()
@@ -185,6 +186,7 @@ def train_model(model, dataloaders, criterion, optimizer, device, save_dir='chec
         # Iterate over data.
         for b_idx, batch_dict in enumerate(dataloaders['train']):
             patches = batch_dict['patch_bag'].to(device)
+            #print(patches.shape)
             rna_data = batch_dict['rna_data'].to(device)
             survival_months = batch_dict['survival_months'].to(device).float()
             vital_status = batch_dict['vital_status'].to(device).float()
@@ -255,7 +257,7 @@ def train_model(model, dataloaders, criterion, optimizer, device, save_dir='chec
 
     print("\n")
     print("LOADING BEST MODEL, best epoch = {}".format(best_epoch))
-    model.load_state_dict(torch.load(os.path.join(save_dir, 'model_dict_best.pt')))
+    model.load_state_dict(torch.load(os.path.join(save_dir, 'model_dict_best_ours.pt')))
 
     print("EVALUATING ON VAL SET")
     test_loss, val_output_best = evaluate(model, dataloaders['val'], criterion, summary_writer, device, best_epoch,
@@ -384,6 +386,7 @@ def main():
     params_to_update_histo = []
     params_to_update_rna = []
     params_to_update_mlp = []
+    params_to_update_agg = []
 
 
     print("params to learn")
@@ -391,7 +394,7 @@ def main():
     n_layers_to_train = config.get('n_layers_to_train', 100)
 
     layers_to_train = [resnet.fc, resnet.layer4, resnet.layer3, resnet.layer2, resnet.layer1, resnet.conv1]
-    layers_to_train = layers_to_train[:n_layers_to_train] + [model.aggregator]
+    layers_to_train = layers_to_train[:n_layers_to_train]
 
     for param in model_histo.parameters():
         param.requires_grad = False
@@ -415,14 +418,18 @@ def main():
             print("\t {}".format(n))
             params_to_update_mlp.append(param)
             
-
-
+    print("model attention:")
+    for n, param in aggregator.named_parameters():
+        if param.requires_grad:
+            print("\t {}".format(n))
+            params_to_update_agg.append(param)
 
         
 
     optimizer_ft = Adam([{'params': params_to_update_histo, 'lr': config['lr_histo']},
                         {'params': params_to_update_rna, 'lr': config['lr_rna']},
-                        {'params': params_to_update_mlp, 'lr': config['lr_mlp']}],
+                        {'params': params_to_update_mlp, 'lr': config['lr_mlp']},
+                        {'params': params_to_update_agg, 'lr': 1e-03}],
                         weight_decay=config['weight_decay'])
 
     # Setup the loss fxn
