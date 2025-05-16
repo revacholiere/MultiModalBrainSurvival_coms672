@@ -28,7 +28,7 @@ class TanhAttention(nn.Module):
         out = x * attention_weights * x.shape[1]
         return out,attention_weights
 
-class TanhCrossAttention(nn.Module):
+class TanhCrossAttention(nn.Module): # our modified version of attention - Ekin, Koushik
     def __init__(self, dim=2048):
         super(TanhCrossAttention, self).__init__()
         self.dim = dim
@@ -119,7 +119,7 @@ class BagHistopathologyRNAModel(nn.Module):
 
 
 
-class AggregationBagHistopathologyRNAModel(nn.Module):
+class AggregationBagHistopathologyRNAModel(nn.Module): # our modified version for the project - Ekin, Koushik
     def __init__(self, resnet, rna_mlp, final_mlp, aggregator):
         super(AggregationBagHistopathologyRNAModel, self).__init__()
         self.resnet = resnet

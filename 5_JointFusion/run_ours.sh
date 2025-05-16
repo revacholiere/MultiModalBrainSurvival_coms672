@@ -2,7 +2,7 @@
 
 OUTPUT_FILE="training_outputs_ours.txt"
 START_SEED=42
-NUM_RUNS=10
+NUM_RUNS=5
 
 # Loop 10 times
 for i in $(seq $START_SEED $((START_SEED + NUM_RUNS - 1))); do

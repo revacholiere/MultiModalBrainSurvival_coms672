@@ -243,6 +243,9 @@ def train_model(model, dataloaders, criterion, optimizer, device, save_dir='chec
         train_loss, _ = evaluate(model, dataloaders['train'], criterion, summary_writer, device, epoch,mode='train', task=task,target_label=target_label)
         val_loss, _ = evaluate(model, dataloaders['val'], criterion, summary_writer, device, epoch, mode='val', task=task,target_label=target_label)
         
+        print('VALIDATION Loss: {:.4f} Acc: {:.4f}'.format(val_loss, epoch_acc))
+        
+        
         if val_loss < best_val_loss:
             best_epoch = epoch
             torch.save(model.state_dict(), os.path.join(save_dir, 'model_dict_best_ours.pt'))
@@ -298,6 +301,14 @@ def main():
         args.checkpoint_path = config['checkpoint_path']
     if 'summary_path' in config:
         args.summary_path = config['summary_path']
+        
+        
+    print("lr_mlp", config["lr_mlp"])
+    print("lr_agg", config["lr_agg"])
+    print("batch_size", config["batch_size"])
+    print("bag_size", config["train_bag_size"], config["val_bag_size"])
+    print("dropout", config["dropout"])
+   
 
     device = torch.device("cuda:0" if (torch.cuda.is_available() and config['use_cuda']) else "cpu")
     num_classes, num_epochs = config['num_classes'], config['num_epochs']
@@ -311,8 +322,9 @@ def main():
     elif config['aggregator'] == 'transformer':
         aggregator = TransformerEncoder(config['transformer_layers'], 2048, config['aggregator_hdim'], 5,
                                         config['aggregator_hdim'], .2, 0)
-    elif config['aggregator'] == 'cross_attention':
+    elif config['aggregator'] == 'cross_attention': # Added by Ekin, Koushik
         aggregator = TanhCrossAttention(dim=2048)
+
         
     model_histo = resnet
     model_rna = torch.nn.Sequential(
@@ -323,12 +335,12 @@ def main():
         nn.Linear(4096, 2048), 
     )
     combine_mlp = torch.nn.Sequential(
-        nn.Dropout(0.8), 
+        nn.Dropout(config["dropout"]), 
         nn.Linear(4096, 1)) #third model
     
     
     
-    model = AggregationBagHistopathologyRNAModel(model_histo, model_rna, combine_mlp, aggregator)
+    model = AggregationBagHistopathologyRNAModel(model_histo, model_rna, combine_mlp, aggregator) # Added by Ekin, Koushik
     if config['restore_path'] != "":
         restore_path=config['restore_path']
         print (restore_path)
@@ -386,7 +398,7 @@ def main():
     params_to_update_histo = []
     params_to_update_rna = []
     params_to_update_mlp = []
-    params_to_update_agg = []
+    params_to_update_agg = [] # Added by Ekin, Koushik
 
 
     print("params to learn")
@@ -419,7 +431,7 @@ def main():
             params_to_update_mlp.append(param)
             
     print("model attention:")
-    for n, param in aggregator.named_parameters():
+    for n, param in aggregator.named_parameters(): # added by Ekin, Koushik
         if param.requires_grad:
             print("\t {}".format(n))
             params_to_update_agg.append(param)
@@ -429,7 +441,7 @@ def main():
     optimizer_ft = Adam([{'params': params_to_update_histo, 'lr': config['lr_histo']},
                         {'params': params_to_update_rna, 'lr': config['lr_rna']},
                         {'params': params_to_update_mlp, 'lr': config['lr_mlp']},
-                        {'params': params_to_update_agg, 'lr': 1e-03}],
+                        {'params': params_to_update_agg, 'lr': config['lr_agg']}], # lr_agg part added by Ekin, Koushik
                         weight_decay=config['weight_decay'])
 
     # Setup the loss fxn
@@ -464,6 +476,7 @@ def main():
                 target_label=config.get('target_label', 'vital_status')
                 
                )
+    
 
 ### Input arguments
 ####################

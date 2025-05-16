@@ -90,7 +90,7 @@ def evaluate(model, val_dataloader, criterion, summary_writer, device, epoch, mo
         survival_months_list.append(survival_months.detach().cpu().numpy())
         vital_status_list.append(vital_status.detach().cpu().numpy())
         wsi_list.append(wsis)
-        case_list.append(batch_dict['case'])
+        case_list.append(batch_dict['case_id'])
 
     wsi_list = [w for w_b in wsi_list for w in w_b]
     case_list = [c for c_b in case_list for c in c_b]
