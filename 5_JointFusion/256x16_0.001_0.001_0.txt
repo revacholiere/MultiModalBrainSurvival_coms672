@@ -1,0 +1,1125 @@
+PyTorch Version:  2.7.0+cu126
+Torchvision Version:  0.22.0+cu126
+Loaded model
+loading datasets
+loaded datasets
+Initialized Datasets and Dataloaders...
+params to learn
+model_histo:
+	 weight
+	 bias
+	 0.conv1.weight
+	 0.bn1.weight
+	 0.bn1.bias
+	 0.conv2.weight
+	 0.bn2.weight
+	 0.bn2.bias
+	 0.conv3.weight
+	 0.bn3.weight
+	 0.bn3.bias
+	 0.downsample.0.weight
+	 0.downsample.1.weight
+	 0.downsample.1.bias
+	 1.conv1.weight
+	 1.bn1.weight
+	 1.bn1.bias
+	 1.conv2.weight
+	 1.bn2.weight
+	 1.bn2.bias
+	 1.conv3.weight
+	 1.bn3.weight
+	 1.bn3.bias
+	 2.conv1.weight
+	 2.bn1.weight
+	 2.bn1.bias
+	 2.conv2.weight
+	 2.bn2.weight
+	 2.bn2.bias
+	 2.conv3.weight
+	 2.bn3.weight
+	 2.bn3.bias
+model_rna:
+	 1.weight
+	 1.bias
+	 4.weight
+	 4.bias
+model integrated:
+	 0.weight
+	 0.bias
+model attention:
+	 gene_linear.weight
+	 linear.weight
+Epoch 0/19
+----------
+TRAIN Loss: 3.5596 Acc: 0.0000
+train wsi  | epoch 0 | CI 0.659
+train case  | epoch 0 | CI 0.637
+val wsi  | epoch 0 | CI 0.552
+val case  | epoch 0 | CI 0.552
+VALIDATION Loss: 3.1795 Acc: 0.0000
+Epoch 1/19
+----------
+TRAIN Loss: 3.4873 Acc: 0.0000
+train wsi  | epoch 1 | CI 0.681
+train case  | epoch 1 | CI 0.662
+val wsi  | epoch 1 | CI 0.556
+val case  | epoch 1 | CI 0.556
+VALIDATION Loss: 3.1618 Acc: 0.0000
+Epoch 2/19
+----------
+TRAIN Loss: 3.4543 Acc: 0.0000
+train wsi  | epoch 2 | CI 0.718
+train case  | epoch 2 | CI 0.698
+val wsi  | epoch 2 | CI 0.605
+val case  | epoch 2 | CI 0.605
+VALIDATION Loss: 3.0864 Acc: 0.0000
+Epoch 3/19
+----------
+TRAIN Loss: 3.4121 Acc: 0.0000
+train wsi  | epoch 3 | CI 0.737
+train case  | epoch 3 | CI 0.719
+val wsi  | epoch 3 | CI 0.623
+val case  | epoch 3 | CI 0.623
+VALIDATION Loss: 3.0572 Acc: 0.0000
+Epoch 4/19
+----------
+TRAIN Loss: 3.3793 Acc: 0.0000
+train wsi  | epoch 4 | CI 0.744
+train case  | epoch 4 | CI 0.732
+val wsi  | epoch 4 | CI 0.578
+val case  | epoch 4 | CI 0.578
+VALIDATION Loss: 3.1166 Acc: 0.0000
+Epoch 5/19
+----------
+TRAIN Loss: 3.3550 Acc: 0.0000
+train wsi  | epoch 5 | CI 0.761
+train case  | epoch 5 | CI 0.746
+val wsi  | epoch 5 | CI 0.587
+val case  | epoch 5 | CI 0.587
+VALIDATION Loss: 3.1204 Acc: 0.0000
+Epoch 6/19
+----------
+TRAIN Loss: 3.3259 Acc: 0.0000
+train wsi  | epoch 6 | CI 0.778
+train case  | epoch 6 | CI 0.770
+val wsi  | epoch 6 | CI 0.601
+val case  | epoch 6 | CI 0.601
+VALIDATION Loss: 3.1159 Acc: 0.0000
+Epoch 7/19
+----------
+TRAIN Loss: 3.3134 Acc: 0.0000
+train wsi  | epoch 7 | CI 0.787
+train case  | epoch 7 | CI 0.774
+val wsi  | epoch 7 | CI 0.610
+val case  | epoch 7 | CI 0.610
+VALIDATION Loss: 3.1218 Acc: 0.0000
+Epoch 8/19
+----------
+TRAIN Loss: 3.2769 Acc: 0.0000
+train wsi  | epoch 8 | CI 0.813
+train case  | epoch 8 | CI 0.800
+val wsi  | epoch 8 | CI 0.592
+val case  | epoch 8 | CI 0.592
+VALIDATION Loss: 3.1165 Acc: 0.0000
+Epoch 9/19
+----------
+TRAIN Loss: 3.2781 Acc: 0.0000
+train wsi  | epoch 9 | CI 0.813
+train case  | epoch 9 | CI 0.797
+val wsi  | epoch 9 | CI 0.556
+val case  | epoch 9 | CI 0.556
+VALIDATION Loss: 3.1331 Acc: 0.0000
+Epoch 10/19
+----------
+TRAIN Loss: 3.2293 Acc: 0.0000
+train wsi  | epoch 10 | CI 0.824
+train case  | epoch 10 | CI 0.807
+val wsi  | epoch 10 | CI 0.578
+val case  | epoch 10 | CI 0.578
+VALIDATION Loss: 3.1400 Acc: 0.0000
+Epoch 11/19
+----------
+TRAIN Loss: 3.2149 Acc: 0.0000
+train wsi  | epoch 11 | CI 0.817
+train case  | epoch 11 | CI 0.803
+val wsi  | epoch 11 | CI 0.601
+val case  | epoch 11 | CI 0.601
+VALIDATION Loss: 3.1480 Acc: 0.0000
+Epoch 12/19
+----------
+TRAIN Loss: 3.2073 Acc: 0.0000
+train wsi  | epoch 12 | CI 0.828
+train case  | epoch 12 | CI 0.815
+val wsi  | epoch 12 | CI 0.578
+val case  | epoch 12 | CI 0.578
+VALIDATION Loss: 3.1736 Acc: 0.0000
+Epoch 13/19
+----------
+TRAIN Loss: 3.2187 Acc: 0.0000
+train wsi  | epoch 13 | CI 0.835
+train case  | epoch 13 | CI 0.824
+val wsi  | epoch 13 | CI 0.538
+val case  | epoch 13 | CI 0.538
+VALIDATION Loss: 3.1732 Acc: 0.0000
+Epoch 14/19
+----------
+TRAIN Loss: 3.2140 Acc: 0.0000
+train wsi  | epoch 14 | CI 0.855
+train case  | epoch 14 | CI 0.842
+val wsi  | epoch 14 | CI 0.574
+val case  | epoch 14 | CI 0.574
+VALIDATION Loss: 3.1721 Acc: 0.0000
+Epoch 15/19
+----------
+TRAIN Loss: 3.2071 Acc: 0.0000
+train wsi  | epoch 15 | CI 0.846
+train case  | epoch 15 | CI 0.832
+val wsi  | epoch 15 | CI 0.587
+val case  | epoch 15 | CI 0.587
+VALIDATION Loss: 3.1915 Acc: 0.0000
+Epoch 16/19
+----------
+TRAIN Loss: 3.1515 Acc: 0.0000
+train wsi  | epoch 16 | CI 0.856
+train case  | epoch 16 | CI 0.843
+val wsi  | epoch 16 | CI 0.610
+val case  | epoch 16 | CI 0.610
+VALIDATION Loss: 3.1474 Acc: 0.0000
+Epoch 17/19
+----------
+TRAIN Loss: 3.1287 Acc: 0.0000
+train wsi  | epoch 17 | CI 0.861
+train case  | epoch 17 | CI 0.848
+val wsi  | epoch 17 | CI 0.574
+val case  | epoch 17 | CI 0.574
+VALIDATION Loss: 3.1357 Acc: 0.0000
+Epoch 18/19
+----------
+TRAIN Loss: 3.1409 Acc: 0.0000
+train wsi  | epoch 18 | CI 0.862
+train case  | epoch 18 | CI 0.845
+val wsi  | epoch 18 | CI 0.637
+val case  | epoch 18 | CI 0.637
+VALIDATION Loss: 3.0927 Acc: 0.0000
+Epoch 19/19
+----------
+train | epoch 19 | batch 4/5| loss      3.116 | acc      0.000 |   162.324 bags /s
+TRAIN Loss: 3.1165 Acc: 0.0000
+train wsi  | epoch 19 | CI 0.854
+train case  | epoch 19 | CI 0.836
+val wsi  | epoch 19 | CI 0.650
+val case  | epoch 19 | CI 0.650
+VALIDATION Loss: 3.0086 Acc: 0.0000
+EVALUATING ON VAL SET
+val wsi  | epoch 19 | CI 0.650
+val case  | epoch 19 | CI 0.650
+
+
+LOADING BEST MODEL, best epoch = 19
+EVALUATING ON VAL SET
+val wsi  | epoch 19 | CI 0.650
+val case  | epoch 19 | CI 0.650
+EVALUATING ON TEST SET
+test wsi  | epoch 19 | CI 0.642
+test case  | epoch 19 | CI 0.590
+Wrote model output files to joint/output_ours/outputs/jointfusion_model
+PyTorch Version:  2.7.0+cu126
+Torchvision Version:  0.22.0+cu126
+Loaded model
+loading datasets
+loaded datasets
+Initialized Datasets and Dataloaders...
+params to learn
+model_histo:
+	 weight
+	 bias
+	 0.conv1.weight
+	 0.bn1.weight
+	 0.bn1.bias
+	 0.conv2.weight
+	 0.bn2.weight
+	 0.bn2.bias
+	 0.conv3.weight
+	 0.bn3.weight
+	 0.bn3.bias
+	 0.downsample.0.weight
+	 0.downsample.1.weight
+	 0.downsample.1.bias
+	 1.conv1.weight
+	 1.bn1.weight
+	 1.bn1.bias
+	 1.conv2.weight
+	 1.bn2.weight
+	 1.bn2.bias
+	 1.conv3.weight
+	 1.bn3.weight
+	 1.bn3.bias
+	 2.conv1.weight
+	 2.bn1.weight
+	 2.bn1.bias
+	 2.conv2.weight
+	 2.bn2.weight
+	 2.bn2.bias
+	 2.conv3.weight
+	 2.bn3.weight
+	 2.bn3.bias
+model_rna:
+	 1.weight
+	 1.bias
+	 4.weight
+	 4.bias
+model integrated:
+	 0.weight
+	 0.bias
+model attention:
+	 gene_linear.weight
+	 linear.weight
+Epoch 0/19
+----------
+TRAIN Loss: 3.5470 Acc: 0.0000
+train wsi  | epoch 0 | CI 0.652
+train case  | epoch 0 | CI 0.642
+val wsi  | epoch 0 | CI 0.655
+val case  | epoch 0 | CI 0.655
+VALIDATION Loss: 3.1950 Acc: 0.0000
+Epoch 1/19
+----------
+TRAIN Loss: 3.4296 Acc: 0.0000
+train wsi  | epoch 1 | CI 0.705
+train case  | epoch 1 | CI 0.690
+val wsi  | epoch 1 | CI 0.637
+val case  | epoch 1 | CI 0.637
+VALIDATION Loss: 3.2167 Acc: 0.0000
+Epoch 2/19
+----------
+TRAIN Loss: 3.4507 Acc: 0.0000
+train wsi  | epoch 2 | CI 0.729
+train case  | epoch 2 | CI 0.717
+val wsi  | epoch 2 | CI 0.646
+val case  | epoch 2 | CI 0.646
+VALIDATION Loss: 3.1772 Acc: 0.0000
+Epoch 3/19
+----------
+TRAIN Loss: 3.3928 Acc: 0.0000
+train wsi  | epoch 3 | CI 0.745
+train case  | epoch 3 | CI 0.734
+val wsi  | epoch 3 | CI 0.659
+val case  | epoch 3 | CI 0.659
+VALIDATION Loss: 3.1357 Acc: 0.0000
+Epoch 4/19
+----------
+TRAIN Loss: 3.3786 Acc: 0.0000
+train wsi  | epoch 4 | CI 0.778
+train case  | epoch 4 | CI 0.761
+val wsi  | epoch 4 | CI 0.673
+val case  | epoch 4 | CI 0.673
+VALIDATION Loss: 3.1153 Acc: 0.0000
+Epoch 5/19
+----------
+TRAIN Loss: 3.3200 Acc: 0.0000
+train wsi  | epoch 5 | CI 0.771
+train case  | epoch 5 | CI 0.764
+val wsi  | epoch 5 | CI 0.691
+val case  | epoch 5 | CI 0.691
+VALIDATION Loss: 3.1150 Acc: 0.0000
+Epoch 6/19
+----------
+TRAIN Loss: 3.3200 Acc: 0.0000
+train wsi  | epoch 6 | CI 0.764
+train case  | epoch 6 | CI 0.747
+val wsi  | epoch 6 | CI 0.664
+val case  | epoch 6 | CI 0.664
+VALIDATION Loss: 3.1386 Acc: 0.0000
+Epoch 7/19
+----------
+TRAIN Loss: 3.3206 Acc: 0.0000
+train wsi  | epoch 7 | CI 0.792
+train case  | epoch 7 | CI 0.772
+val wsi  | epoch 7 | CI 0.682
+val case  | epoch 7 | CI 0.682
+VALIDATION Loss: 3.1358 Acc: 0.0000
+Epoch 8/19
+----------
+TRAIN Loss: 3.2756 Acc: 0.0000
+train wsi  | epoch 8 | CI 0.809
+train case  | epoch 8 | CI 0.787
+val wsi  | epoch 8 | CI 0.709
+val case  | epoch 8 | CI 0.709
+VALIDATION Loss: 3.1324 Acc: 0.0000
+Epoch 9/19
+----------
+TRAIN Loss: 3.2710 Acc: 0.0000
+train wsi  | epoch 9 | CI 0.822
+train case  | epoch 9 | CI 0.805
+val wsi  | epoch 9 | CI 0.695
+val case  | epoch 9 | CI 0.695
+VALIDATION Loss: 3.1576 Acc: 0.0000
+Epoch 10/19
+----------
+TRAIN Loss: 3.2536 Acc: 0.0000
+train wsi  | epoch 10 | CI 0.820
+train case  | epoch 10 | CI 0.805
+val wsi  | epoch 10 | CI 0.709
+val case  | epoch 10 | CI 0.709
+VALIDATION Loss: 3.1549 Acc: 0.0000
+Epoch 11/19
+----------
+TRAIN Loss: 3.2256 Acc: 0.0000
+train wsi  | epoch 11 | CI 0.842
+train case  | epoch 11 | CI 0.823
+val wsi  | epoch 11 | CI 0.659
+val case  | epoch 11 | CI 0.659
+VALIDATION Loss: 3.3366 Acc: 0.0000
+Epoch 12/19
+----------
+TRAIN Loss: 3.2124 Acc: 0.0000
+train wsi  | epoch 12 | CI 0.835
+train case  | epoch 12 | CI 0.819
+val wsi  | epoch 12 | CI 0.673
+val case  | epoch 12 | CI 0.673
+VALIDATION Loss: 3.3536 Acc: 0.0000
+Epoch 13/19
+----------
+TRAIN Loss: 3.2159 Acc: 0.0000
+train wsi  | epoch 13 | CI 0.832
+train case  | epoch 13 | CI 0.816
+val wsi  | epoch 13 | CI 0.668
+val case  | epoch 13 | CI 0.668
+VALIDATION Loss: 3.3162 Acc: 0.0000
+Epoch 14/19
+----------
+TRAIN Loss: 3.1972 Acc: 0.0000
+train wsi  | epoch 14 | CI 0.859
+train case  | epoch 14 | CI 0.837
+val wsi  | epoch 14 | CI 0.673
+val case  | epoch 14 | CI 0.673
+VALIDATION Loss: 3.3401 Acc: 0.0000
+Epoch 15/19
+----------
+TRAIN Loss: 3.1713 Acc: 0.0000
+train wsi  | epoch 15 | CI 0.857
+train case  | epoch 15 | CI 0.841
+val wsi  | epoch 15 | CI 0.695
+val case  | epoch 15 | CI 0.695
+VALIDATION Loss: 3.3344 Acc: 0.0000
+Epoch 16/19
+----------
+TRAIN Loss: 3.1501 Acc: 0.0000
+train wsi  | epoch 16 | CI 0.868
+train case  | epoch 16 | CI 0.855
+val wsi  | epoch 16 | CI 0.695
+val case  | epoch 16 | CI 0.695
+VALIDATION Loss: 3.2724 Acc: 0.0000
+Epoch 17/19
+----------
+TRAIN Loss: 3.1315 Acc: 0.0000
+train wsi  | epoch 17 | CI 0.858
+train case  | epoch 17 | CI 0.845
+val wsi  | epoch 17 | CI 0.686
+val case  | epoch 17 | CI 0.686
+VALIDATION Loss: 3.2639 Acc: 0.0000
+Epoch 18/19
+----------
+TRAIN Loss: 3.1332 Acc: 0.0000
+train wsi  | epoch 18 | CI 0.876
+train case  | epoch 18 | CI 0.862
+val wsi  | epoch 18 | CI 0.700
+val case  | epoch 18 | CI 0.700
+VALIDATION Loss: 3.2808 Acc: 0.0000
+Epoch 19/19
+----------
+train | epoch 19 | batch 4/5| loss      3.109 | acc      0.000 |   161.589 bags /s
+TRAIN Loss: 3.1087 Acc: 0.0000
+train wsi  | epoch 19 | CI 0.884
+train case  | epoch 19 | CI 0.870
+val wsi  | epoch 19 | CI 0.753
+val case  | epoch 19 | CI 0.753
+VALIDATION Loss: 3.2613 Acc: 0.0000
+EVALUATING ON VAL SET
+val wsi  | epoch 19 | CI 0.753
+val case  | epoch 19 | CI 0.753
+
+
+LOADING BEST MODEL, best epoch = 5
+EVALUATING ON VAL SET
+val wsi  | epoch 5 | CI 0.691
+val case  | epoch 5 | CI 0.691
+EVALUATING ON TEST SET
+test wsi  | epoch 5 | CI 0.584
+test case  | epoch 5 | CI 0.566
+Wrote model output files to joint/output_ours/outputs/jointfusion_model
+PyTorch Version:  2.7.0+cu126
+Torchvision Version:  0.22.0+cu126
+Loaded model
+loading datasets
+loaded datasets
+Initialized Datasets and Dataloaders...
+params to learn
+model_histo:
+	 weight
+	 bias
+	 0.conv1.weight
+	 0.bn1.weight
+	 0.bn1.bias
+	 0.conv2.weight
+	 0.bn2.weight
+	 0.bn2.bias
+	 0.conv3.weight
+	 0.bn3.weight
+	 0.bn3.bias
+	 0.downsample.0.weight
+	 0.downsample.1.weight
+	 0.downsample.1.bias
+	 1.conv1.weight
+	 1.bn1.weight
+	 1.bn1.bias
+	 1.conv2.weight
+	 1.bn2.weight
+	 1.bn2.bias
+	 1.conv3.weight
+	 1.bn3.weight
+	 1.bn3.bias
+	 2.conv1.weight
+	 2.bn1.weight
+	 2.bn1.bias
+	 2.conv2.weight
+	 2.bn2.weight
+	 2.bn2.bias
+	 2.conv3.weight
+	 2.bn3.weight
+	 2.bn3.bias
+model_rna:
+	 1.weight
+	 1.bias
+	 4.weight
+	 4.bias
+model integrated:
+	 0.weight
+	 0.bias
+model attention:
+	 gene_linear.weight
+	 linear.weight
+Epoch 0/19
+----------
+TRAIN Loss: 3.5489 Acc: 0.0000
+train wsi  | epoch 0 | CI 0.666
+train case  | epoch 0 | CI 0.653
+val wsi  | epoch 0 | CI 0.623
+val case  | epoch 0 | CI 0.623
+VALIDATION Loss: 3.1028 Acc: 0.0000
+Epoch 1/19
+----------
+TRAIN Loss: 3.4562 Acc: 0.0000
+train wsi  | epoch 1 | CI 0.712
+train case  | epoch 1 | CI 0.700
+val wsi  | epoch 1 | CI 0.641
+val case  | epoch 1 | CI 0.641
+VALIDATION Loss: 3.1171 Acc: 0.0000
+Epoch 2/19
+----------
+TRAIN Loss: 3.4174 Acc: 0.0000
+train wsi  | epoch 2 | CI 0.730
+train case  | epoch 2 | CI 0.720
+val wsi  | epoch 2 | CI 0.632
+val case  | epoch 2 | CI 0.632
+VALIDATION Loss: 3.1147 Acc: 0.0000
+Epoch 3/19
+----------
+TRAIN Loss: 3.3866 Acc: 0.0000
+train wsi  | epoch 3 | CI 0.744
+train case  | epoch 3 | CI 0.737
+val wsi  | epoch 3 | CI 0.632
+val case  | epoch 3 | CI 0.632
+VALIDATION Loss: 3.1183 Acc: 0.0000
+Epoch 4/19
+----------
+TRAIN Loss: 3.3748 Acc: 0.0000
+train wsi  | epoch 4 | CI 0.763
+train case  | epoch 4 | CI 0.746
+val wsi  | epoch 4 | CI 0.659
+val case  | epoch 4 | CI 0.659
+VALIDATION Loss: 3.1200 Acc: 0.0000
+Epoch 5/19
+----------
+TRAIN Loss: 3.3408 Acc: 0.0000
+train wsi  | epoch 5 | CI 0.774
+train case  | epoch 5 | CI 0.764
+val wsi  | epoch 5 | CI 0.578
+val case  | epoch 5 | CI 0.578
+VALIDATION Loss: 3.1558 Acc: 0.0000
+Epoch 6/19
+----------
+TRAIN Loss: 3.3309 Acc: 0.0000
+train wsi  | epoch 6 | CI 0.798
+train case  | epoch 6 | CI 0.778
+val wsi  | epoch 6 | CI 0.511
+val case  | epoch 6 | CI 0.511
+VALIDATION Loss: 3.1631 Acc: 0.0000
+Epoch 7/19
+----------
+TRAIN Loss: 3.3146 Acc: 0.0000
+train wsi  | epoch 7 | CI 0.792
+train case  | epoch 7 | CI 0.776
+val wsi  | epoch 7 | CI 0.529
+val case  | epoch 7 | CI 0.529
+VALIDATION Loss: 3.1823 Acc: 0.0000
+Epoch 8/19
+----------
+TRAIN Loss: 3.2947 Acc: 0.0000
+train wsi  | epoch 8 | CI 0.811
+train case  | epoch 8 | CI 0.797
+val wsi  | epoch 8 | CI 0.587
+val case  | epoch 8 | CI 0.587
+VALIDATION Loss: 3.1798 Acc: 0.0000
+Epoch 9/19
+----------
+TRAIN Loss: 3.2858 Acc: 0.0000
+train wsi  | epoch 9 | CI 0.811
+train case  | epoch 9 | CI 0.796
+val wsi  | epoch 9 | CI 0.596
+val case  | epoch 9 | CI 0.596
+VALIDATION Loss: 3.1344 Acc: 0.0000
+Epoch 10/19
+----------
+TRAIN Loss: 3.2536 Acc: 0.0000
+train wsi  | epoch 10 | CI 0.809
+train case  | epoch 10 | CI 0.799
+val wsi  | epoch 10 | CI 0.623
+val case  | epoch 10 | CI 0.623
+VALIDATION Loss: 3.0661 Acc: 0.0000
+Epoch 11/19
+----------
+TRAIN Loss: 3.2313 Acc: 0.0000
+train wsi  | epoch 11 | CI 0.803
+train case  | epoch 11 | CI 0.788
+val wsi  | epoch 11 | CI 0.677
+val case  | epoch 11 | CI 0.677
+VALIDATION Loss: 3.0348 Acc: 0.0000
+Epoch 12/19
+----------
+TRAIN Loss: 3.2471 Acc: 0.0000
+train wsi  | epoch 12 | CI 0.833
+train case  | epoch 12 | CI 0.818
+val wsi  | epoch 12 | CI 0.704
+val case  | epoch 12 | CI 0.704
+VALIDATION Loss: 3.0609 Acc: 0.0000
+Epoch 13/19
+----------
+TRAIN Loss: 3.1995 Acc: 0.0000
+train wsi  | epoch 13 | CI 0.844
+train case  | epoch 13 | CI 0.829
+val wsi  | epoch 13 | CI 0.709
+val case  | epoch 13 | CI 0.709
+VALIDATION Loss: 3.0766 Acc: 0.0000
+Epoch 14/19
+----------
+TRAIN Loss: 3.1711 Acc: 0.0000
+train wsi  | epoch 14 | CI 0.853
+train case  | epoch 14 | CI 0.840
+val wsi  | epoch 14 | CI 0.713
+val case  | epoch 14 | CI 0.713
+VALIDATION Loss: 3.0317 Acc: 0.0000
+Epoch 15/19
+----------
+TRAIN Loss: 3.1686 Acc: 0.0000
+train wsi  | epoch 15 | CI 0.859
+train case  | epoch 15 | CI 0.848
+val wsi  | epoch 15 | CI 0.726
+val case  | epoch 15 | CI 0.726
+VALIDATION Loss: 2.9755 Acc: 0.0000
+Epoch 16/19
+----------
+TRAIN Loss: 3.1648 Acc: 0.0000
+train wsi  | epoch 16 | CI 0.866
+train case  | epoch 16 | CI 0.852
+val wsi  | epoch 16 | CI 0.713
+val case  | epoch 16 | CI 0.713
+VALIDATION Loss: 2.9845 Acc: 0.0000
+Epoch 17/19
+----------
+TRAIN Loss: 3.1391 Acc: 0.0000
+train wsi  | epoch 17 | CI 0.872
+train case  | epoch 17 | CI 0.861
+val wsi  | epoch 17 | CI 0.713
+val case  | epoch 17 | CI 0.713
+VALIDATION Loss: 3.0020 Acc: 0.0000
+Epoch 18/19
+----------
+TRAIN Loss: 3.0917 Acc: 0.0000
+train wsi  | epoch 18 | CI 0.872
+train case  | epoch 18 | CI 0.864
+val wsi  | epoch 18 | CI 0.713
+val case  | epoch 18 | CI 0.713
+VALIDATION Loss: 2.9529 Acc: 0.0000
+Epoch 19/19
+----------
+train | epoch 19 | batch 4/5| loss      3.094 | acc      0.000 |   160.859 bags /s
+TRAIN Loss: 3.0938 Acc: 0.0000
+train wsi  | epoch 19 | CI 0.877
+train case  | epoch 19 | CI 0.861
+val wsi  | epoch 19 | CI 0.655
+val case  | epoch 19 | CI 0.655
+VALIDATION Loss: 2.9713 Acc: 0.0000
+EVALUATING ON VAL SET
+val wsi  | epoch 19 | CI 0.655
+val case  | epoch 19 | CI 0.655
+
+
+LOADING BEST MODEL, best epoch = 18
+EVALUATING ON VAL SET
+val wsi  | epoch 18 | CI 0.713
+val case  | epoch 18 | CI 0.713
+EVALUATING ON TEST SET
+test wsi  | epoch 18 | CI 0.629
+test case  | epoch 18 | CI 0.584
+Wrote model output files to joint/output_ours/outputs/jointfusion_model
+PyTorch Version:  2.7.0+cu126
+Torchvision Version:  0.22.0+cu126
+Loaded model
+loading datasets
+loaded datasets
+Initialized Datasets and Dataloaders...
+params to learn
+model_histo:
+	 weight
+	 bias
+	 0.conv1.weight
+	 0.bn1.weight
+	 0.bn1.bias
+	 0.conv2.weight
+	 0.bn2.weight
+	 0.bn2.bias
+	 0.conv3.weight
+	 0.bn3.weight
+	 0.bn3.bias
+	 0.downsample.0.weight
+	 0.downsample.1.weight
+	 0.downsample.1.bias
+	 1.conv1.weight
+	 1.bn1.weight
+	 1.bn1.bias
+	 1.conv2.weight
+	 1.bn2.weight
+	 1.bn2.bias
+	 1.conv3.weight
+	 1.bn3.weight
+	 1.bn3.bias
+	 2.conv1.weight
+	 2.bn1.weight
+	 2.bn1.bias
+	 2.conv2.weight
+	 2.bn2.weight
+	 2.bn2.bias
+	 2.conv3.weight
+	 2.bn3.weight
+	 2.bn3.bias
+model_rna:
+	 1.weight
+	 1.bias
+	 4.weight
+	 4.bias
+model integrated:
+	 0.weight
+	 0.bias
+model attention:
+	 gene_linear.weight
+	 linear.weight
+Epoch 0/19
+----------
+TRAIN Loss: 3.5430 Acc: 0.0000
+train wsi  | epoch 0 | CI 0.631
+train case  | epoch 0 | CI 0.625
+val wsi  | epoch 0 | CI 0.619
+val case  | epoch 0 | CI 0.619
+VALIDATION Loss: 3.2856 Acc: 0.0000
+Epoch 1/19
+----------
+TRAIN Loss: 3.4619 Acc: 0.0000
+train wsi  | epoch 1 | CI 0.697
+train case  | epoch 1 | CI 0.685
+val wsi  | epoch 1 | CI 0.664
+val case  | epoch 1 | CI 0.664
+VALIDATION Loss: 3.0766 Acc: 0.0000
+Epoch 2/19
+----------
+TRAIN Loss: 3.4292 Acc: 0.0000
+train wsi  | epoch 2 | CI 0.720
+train case  | epoch 2 | CI 0.702
+val wsi  | epoch 2 | CI 0.641
+val case  | epoch 2 | CI 0.641
+VALIDATION Loss: 3.1841 Acc: 0.0000
+Epoch 3/19
+----------
+TRAIN Loss: 3.4019 Acc: 0.0000
+train wsi  | epoch 3 | CI 0.743
+train case  | epoch 3 | CI 0.730
+val wsi  | epoch 3 | CI 0.646
+val case  | epoch 3 | CI 0.646
+VALIDATION Loss: 3.2381 Acc: 0.0000
+Epoch 4/19
+----------
+TRAIN Loss: 3.3465 Acc: 0.0000
+train wsi  | epoch 4 | CI 0.765
+train case  | epoch 4 | CI 0.759
+val wsi  | epoch 4 | CI 0.587
+val case  | epoch 4 | CI 0.587
+VALIDATION Loss: 3.2728 Acc: 0.0000
+Epoch 5/19
+----------
+TRAIN Loss: 3.3347 Acc: 0.0000
+train wsi  | epoch 5 | CI 0.788
+train case  | epoch 5 | CI 0.781
+val wsi  | epoch 5 | CI 0.614
+val case  | epoch 5 | CI 0.614
+VALIDATION Loss: 3.2673 Acc: 0.0000
+Epoch 6/19
+----------
+TRAIN Loss: 3.3136 Acc: 0.0000
+train wsi  | epoch 6 | CI 0.794
+train case  | epoch 6 | CI 0.787
+val wsi  | epoch 6 | CI 0.632
+val case  | epoch 6 | CI 0.632
+VALIDATION Loss: 3.2542 Acc: 0.0000
+Epoch 7/19
+----------
+TRAIN Loss: 3.2766 Acc: 0.0000
+train wsi  | epoch 7 | CI 0.802
+train case  | epoch 7 | CI 0.794
+val wsi  | epoch 7 | CI 0.637
+val case  | epoch 7 | CI 0.637
+VALIDATION Loss: 3.3015 Acc: 0.0000
+Epoch 8/19
+----------
+TRAIN Loss: 3.2531 Acc: 0.0000
+train wsi  | epoch 8 | CI 0.805
+train case  | epoch 8 | CI 0.797
+val wsi  | epoch 8 | CI 0.619
+val case  | epoch 8 | CI 0.619
+VALIDATION Loss: 3.2988 Acc: 0.0000
+Epoch 9/19
+----------
+TRAIN Loss: 3.2456 Acc: 0.0000
+train wsi  | epoch 9 | CI 0.813
+train case  | epoch 9 | CI 0.802
+val wsi  | epoch 9 | CI 0.592
+val case  | epoch 9 | CI 0.592
+VALIDATION Loss: 3.3144 Acc: 0.0000
+Epoch 10/19
+----------
+TRAIN Loss: 3.2282 Acc: 0.0000
+train wsi  | epoch 10 | CI 0.821
+train case  | epoch 10 | CI 0.806
+val wsi  | epoch 10 | CI 0.605
+val case  | epoch 10 | CI 0.605
+VALIDATION Loss: 3.3035 Acc: 0.0000
+Epoch 11/19
+----------
+TRAIN Loss: 3.2247 Acc: 0.0000
+train wsi  | epoch 11 | CI 0.821
+train case  | epoch 11 | CI 0.814
+val wsi  | epoch 11 | CI 0.632
+val case  | epoch 11 | CI 0.632
+VALIDATION Loss: 3.2900 Acc: 0.0000
+Epoch 12/19
+----------
+TRAIN Loss: 3.2128 Acc: 0.0000
+train wsi  | epoch 12 | CI 0.850
+train case  | epoch 12 | CI 0.838
+val wsi  | epoch 12 | CI 0.614
+val case  | epoch 12 | CI 0.614
+VALIDATION Loss: 3.2639 Acc: 0.0000
+Epoch 13/19
+----------
+TRAIN Loss: 3.1926 Acc: 0.0000
+train wsi  | epoch 13 | CI 0.866
+train case  | epoch 13 | CI 0.854
+val wsi  | epoch 13 | CI 0.637
+val case  | epoch 13 | CI 0.637
+VALIDATION Loss: 3.2593 Acc: 0.0000
+Epoch 14/19
+----------
+TRAIN Loss: 3.1787 Acc: 0.0000
+train wsi  | epoch 14 | CI 0.864
+train case  | epoch 14 | CI 0.853
+val wsi  | epoch 14 | CI 0.650
+val case  | epoch 14 | CI 0.650
+VALIDATION Loss: 3.1956 Acc: 0.0000
+Epoch 15/19
+----------
+TRAIN Loss: 3.1529 Acc: 0.0000
+train wsi  | epoch 15 | CI 0.880
+train case  | epoch 15 | CI 0.865
+val wsi  | epoch 15 | CI 0.664
+val case  | epoch 15 | CI 0.664
+VALIDATION Loss: 3.1740 Acc: 0.0000
+Epoch 16/19
+----------
+TRAIN Loss: 3.1436 Acc: 0.0000
+train wsi  | epoch 16 | CI 0.868
+train case  | epoch 16 | CI 0.857
+val wsi  | epoch 16 | CI 0.659
+val case  | epoch 16 | CI 0.659
+VALIDATION Loss: 3.1589 Acc: 0.0000
+Epoch 17/19
+----------
+TRAIN Loss: 3.1270 Acc: 0.0000
+train wsi  | epoch 17 | CI 0.874
+train case  | epoch 17 | CI 0.860
+val wsi  | epoch 17 | CI 0.637
+val case  | epoch 17 | CI 0.637
+VALIDATION Loss: 3.1618 Acc: 0.0000
+Epoch 18/19
+----------
+TRAIN Loss: 3.1283 Acc: 0.0000
+train wsi  | epoch 18 | CI 0.874
+train case  | epoch 18 | CI 0.864
+val wsi  | epoch 18 | CI 0.646
+val case  | epoch 18 | CI 0.646
+VALIDATION Loss: 3.2126 Acc: 0.0000
+Epoch 19/19
+----------
+train | epoch 19 | batch 4/5| loss      3.129 | acc      0.000 |   161.835 bags /s
+TRAIN Loss: 3.1286 Acc: 0.0000
+train wsi  | epoch 19 | CI 0.873
+train case  | epoch 19 | CI 0.866
+val wsi  | epoch 19 | CI 0.709
+val case  | epoch 19 | CI 0.709
+VALIDATION Loss: 3.1729 Acc: 0.0000
+EVALUATING ON VAL SET
+val wsi  | epoch 19 | CI 0.709
+val case  | epoch 19 | CI 0.709
+
+
+LOADING BEST MODEL, best epoch = 1
+EVALUATING ON VAL SET
+val wsi  | epoch 1 | CI 0.664
+val case  | epoch 1 | CI 0.664
+EVALUATING ON TEST SET
+test wsi  | epoch 1 | CI 0.562
+test case  | epoch 1 | CI 0.511
+Wrote model output files to joint/output_ours/outputs/jointfusion_model
+PyTorch Version:  2.7.0+cu126
+Torchvision Version:  0.22.0+cu126
+Loaded model
+loading datasets
+loaded datasets
+Initialized Datasets and Dataloaders...
+params to learn
+model_histo:
+	 weight
+	 bias
+	 0.conv1.weight
+	 0.bn1.weight
+	 0.bn1.bias
+	 0.conv2.weight
+	 0.bn2.weight
+	 0.bn2.bias
+	 0.conv3.weight
+	 0.bn3.weight
+	 0.bn3.bias
+	 0.downsample.0.weight
+	 0.downsample.1.weight
+	 0.downsample.1.bias
+	 1.conv1.weight
+	 1.bn1.weight
+	 1.bn1.bias
+	 1.conv2.weight
+	 1.bn2.weight
+	 1.bn2.bias
+	 1.conv3.weight
+	 1.bn3.weight
+	 1.bn3.bias
+	 2.conv1.weight
+	 2.bn1.weight
+	 2.bn1.bias
+	 2.conv2.weight
+	 2.bn2.weight
+	 2.bn2.bias
+	 2.conv3.weight
+	 2.bn3.weight
+	 2.bn3.bias
+model_rna:
+	 1.weight
+	 1.bias
+	 4.weight
+	 4.bias
+model integrated:
+	 0.weight
+	 0.bias
+model attention:
+	 gene_linear.weight
+	 linear.weight
+Epoch 0/19
+----------
+TRAIN Loss: 3.5450 Acc: 0.0000
+train wsi  | epoch 0 | CI 0.654
+train case  | epoch 0 | CI 0.646
+val wsi  | epoch 0 | CI 0.664
+val case  | epoch 0 | CI 0.664
+VALIDATION Loss: 3.0399 Acc: 0.0000
+Epoch 1/19
+----------
+TRAIN Loss: 3.4618 Acc: 0.0000
+train wsi  | epoch 1 | CI 0.687
+train case  | epoch 1 | CI 0.682
+val wsi  | epoch 1 | CI 0.695
+val case  | epoch 1 | CI 0.695
+VALIDATION Loss: 3.0131 Acc: 0.0000
+Epoch 2/19
+----------
+TRAIN Loss: 3.4368 Acc: 0.0000
+train wsi  | epoch 2 | CI 0.710
+train case  | epoch 2 | CI 0.699
+val wsi  | epoch 2 | CI 0.677
+val case  | epoch 2 | CI 0.677
+VALIDATION Loss: 3.0204 Acc: 0.0000
+Epoch 3/19
+----------
+TRAIN Loss: 3.4199 Acc: 0.0000
+train wsi  | epoch 3 | CI 0.725
+train case  | epoch 3 | CI 0.715
+val wsi  | epoch 3 | CI 0.677
+val case  | epoch 3 | CI 0.677
+VALIDATION Loss: 3.0250 Acc: 0.0000
+Epoch 4/19
+----------
+TRAIN Loss: 3.4031 Acc: 0.0000
+train wsi  | epoch 4 | CI 0.748
+train case  | epoch 4 | CI 0.739
+val wsi  | epoch 4 | CI 0.700
+val case  | epoch 4 | CI 0.700
+VALIDATION Loss: 3.0235 Acc: 0.0000
+Epoch 5/19
+----------
+TRAIN Loss: 3.3640 Acc: 0.0000
+train wsi  | epoch 5 | CI 0.768
+train case  | epoch 5 | CI 0.763
+val wsi  | epoch 5 | CI 0.735
+val case  | epoch 5 | CI 0.735
+VALIDATION Loss: 2.9943 Acc: 0.0000
+Epoch 6/19
+----------
+TRAIN Loss: 3.3264 Acc: 0.0000
+train wsi  | epoch 6 | CI 0.784
+train case  | epoch 6 | CI 0.775
+val wsi  | epoch 6 | CI 0.794
+val case  | epoch 6 | CI 0.794
+VALIDATION Loss: 2.9498 Acc: 0.0000
+Epoch 7/19
+----------
+TRAIN Loss: 3.3065 Acc: 0.0000
+train wsi  | epoch 7 | CI 0.795
+train case  | epoch 7 | CI 0.783
+val wsi  | epoch 7 | CI 0.803
+val case  | epoch 7 | CI 0.803
+VALIDATION Loss: 2.9426 Acc: 0.0000
+Epoch 8/19
+----------
+TRAIN Loss: 3.2959 Acc: 0.0000
+train wsi  | epoch 8 | CI 0.799
+train case  | epoch 8 | CI 0.789
+val wsi  | epoch 8 | CI 0.780
+val case  | epoch 8 | CI 0.780
+VALIDATION Loss: 2.9543 Acc: 0.0000
+Epoch 9/19
+----------
+TRAIN Loss: 3.2459 Acc: 0.0000
+train wsi  | epoch 9 | CI 0.810
+train case  | epoch 9 | CI 0.798
+val wsi  | epoch 9 | CI 0.767
+val case  | epoch 9 | CI 0.767
+VALIDATION Loss: 2.9620 Acc: 0.0000
+Epoch 10/19
+----------
+TRAIN Loss: 3.2303 Acc: 0.0000
+train wsi  | epoch 10 | CI 0.819
+train case  | epoch 10 | CI 0.808
+val wsi  | epoch 10 | CI 0.789
+val case  | epoch 10 | CI 0.789
+VALIDATION Loss: 2.9634 Acc: 0.0000
+Epoch 11/19
+----------
+TRAIN Loss: 3.2417 Acc: 0.0000
+train wsi  | epoch 11 | CI 0.827
+train case  | epoch 11 | CI 0.814
+val wsi  | epoch 11 | CI 0.771
+val case  | epoch 11 | CI 0.771
+VALIDATION Loss: 2.9482 Acc: 0.0000
+Epoch 12/19
+----------
+TRAIN Loss: 3.1956 Acc: 0.0000
+train wsi  | epoch 12 | CI 0.849
+train case  | epoch 12 | CI 0.833
+val wsi  | epoch 12 | CI 0.785
+val case  | epoch 12 | CI 0.785
+VALIDATION Loss: 2.9639 Acc: 0.0000
+Epoch 13/19
+----------
+TRAIN Loss: 3.1883 Acc: 0.0000
+train wsi  | epoch 13 | CI 0.834
+train case  | epoch 13 | CI 0.820
+val wsi  | epoch 13 | CI 0.861
+val case  | epoch 13 | CI 0.861
+VALIDATION Loss: 2.9140 Acc: 0.0000
+Epoch 14/19
+----------
+TRAIN Loss: 3.1602 Acc: 0.0000
+train wsi  | epoch 14 | CI 0.850
+train case  | epoch 14 | CI 0.838
+val wsi  | epoch 14 | CI 0.857
+val case  | epoch 14 | CI 0.857
+VALIDATION Loss: 2.8719 Acc: 0.0000
+Epoch 15/19
+----------
+TRAIN Loss: 3.1321 Acc: 0.0000
+train wsi  | epoch 15 | CI 0.857
+train case  | epoch 15 | CI 0.842
+val wsi  | epoch 15 | CI 0.861
+val case  | epoch 15 | CI 0.861
+VALIDATION Loss: 2.8301 Acc: 0.0000
+Epoch 16/19
+----------
+TRAIN Loss: 3.1467 Acc: 0.0000
+train wsi  | epoch 16 | CI 0.869
+train case  | epoch 16 | CI 0.853
+val wsi  | epoch 16 | CI 0.830
+val case  | epoch 16 | CI 0.830
+VALIDATION Loss: 2.8567 Acc: 0.0000
+Epoch 17/19
+----------
+TRAIN Loss: 3.1298 Acc: 0.0000
+train wsi  | epoch 17 | CI 0.879
+train case  | epoch 17 | CI 0.861
+val wsi  | epoch 17 | CI 0.816
+val case  | epoch 17 | CI 0.816
+VALIDATION Loss: 2.8804 Acc: 0.0000
+Epoch 18/19
+----------
+TRAIN Loss: 3.1075 Acc: 0.0000
+train wsi  | epoch 18 | CI 0.864
+train case  | epoch 18 | CI 0.845
+val wsi  | epoch 18 | CI 0.852
+val case  | epoch 18 | CI 0.852
+VALIDATION Loss: 2.8435 Acc: 0.0000
+Epoch 19/19
+----------
+train | epoch 19 | batch 4/5| loss      3.123 | acc      0.000 |   161.501 bags /s
+TRAIN Loss: 3.1227 Acc: 0.0000
+train wsi  | epoch 19 | CI 0.871
+train case  | epoch 19 | CI 0.853
+val wsi  | epoch 19 | CI 0.812
+val case  | epoch 19 | CI 0.812
+VALIDATION Loss: 2.8390 Acc: 0.0000
+EVALUATING ON VAL SET
+val wsi  | epoch 19 | CI 0.812
+val case  | epoch 19 | CI 0.812
+
+
+LOADING BEST MODEL, best epoch = 15
+EVALUATING ON VAL SET
+val wsi  | epoch 15 | CI 0.861
+val case  | epoch 15 | CI 0.861
+EVALUATING ON TEST SET
+test wsi  | epoch 15 | CI 0.639
+test case  | epoch 15 | CI 0.578
+Wrote model output files to joint/output_ours/outputs/jointfusion_model
