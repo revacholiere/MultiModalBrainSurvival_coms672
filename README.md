@@ -4,9 +4,11 @@ This is a fork of the code of the paper "Multimodal deep learning to predict pro
 
 **You need to be running this on a Nova instance, otherwise you would have to download multiple GBs per whole slide images and doing patch extraction. If you run through Nova, you can just use the default data filepath in the config_ours file we provided.**
 
-1. Navigate into the folder 5_JointFusion
+1. Clone the repository and navigate into the folder.
 
-2. Run the following in the terminal: ```bash run_ours.sh```
+2. Navigate into the folder 5_JointFusion
+
+3. Run the following in the terminal: ```bash run_ours.sh```
 
 This will create a file called training_output_ours.txt and write the program's outputs (loss and CI score information) into the file. We used this file to easily run 5 seeds and log the results. For ease of testing, we set NUM_RUNS to 1 in the sh file. Note that training will take 15-20 minutes. 
 
