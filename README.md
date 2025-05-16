@@ -8,7 +8,7 @@ This is a fork of the code of the paper "Multimodal deep learning to predict pro
 
 2. Navigate into the folder 5_JointFusion
 
-3. Run the following in the terminal: ```bash run_ours.sh```
+3. Run the following in the terminal: ```sh run_ours.sh```
 
 This will create a file called training_output_ours.txt and write the program's outputs (loss and CI score information) into the file. We used this file to easily run 5 seeds and log the results. For ease of testing, we set NUM_RUNS to 1 in the sh file. Note that training will take 15-20 minutes. 
 
